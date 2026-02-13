@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 
+# api_url = "http://localhost:8000/process"
+api_url = "https://background-remover-api.onrender.com"
+
 st.title("Background Remover")
 
 file = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
@@ -13,8 +16,8 @@ if file:
         with st.spinner("Processing... please wait"):
             try:
                 # Send to FastAPI
-                res = requests.post("http://localhost:8000/process", files={"file": file})
-                # res = requests.post("/process", files={"file": file})
+                res = requests.post(url=api_url, files={"file": file})
+                
                 
                 # Show Result
                 if res.status_code == 200:
