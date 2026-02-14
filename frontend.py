@@ -1,8 +1,7 @@
 import streamlit as st
 import requests
 
-# api_url = "http://localhost:8000/process"
-api_url = "https://background-remover-api.onrender.com"
+api_url = "http://localhost:8000/process"
 
 st.title("Background Remover")
 
