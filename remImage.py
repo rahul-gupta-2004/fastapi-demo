@@ -15,3 +15,5 @@ async def process(file: UploadFile = File(...)):
     output = remove(data)
     # 3. Send it back
     return Response(content=output, media_type="image/png")
+
+
