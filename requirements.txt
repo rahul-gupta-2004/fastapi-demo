@@ -1,8 +1,11 @@
-fastapi
-streamlit
-rembg[cpu]
-uvicorn
-python-multipart
-requests
-Pillow
-numpy
+fastapi==0.115.12
+streamlit==1.44.1
+rembg[cpu]==2.0.65
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+requests==2.32.3
+Pillow==11.1.0
+numpy==2.2.4
+# Explicitly add compatible versions for problematic deps
+numba==0.61.0
+llvmlite==0.44.0
