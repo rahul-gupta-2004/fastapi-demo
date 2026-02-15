@@ -4,6 +4,7 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import Response
 from rembg import remove
+import uvicorn
 
 app = FastAPI()
 
@@ -16,3 +17,7 @@ async def process(file: UploadFile = File(...)):
     data = await file.read()
     output = remove(data)
     return Response(content=output, media_type="image/png")
+
+# Add this at the end of your existing remImage.py
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8501)
