@@ -23,7 +23,7 @@ def divide(a: float, b: float):
 
 @app.get("/")
 def root():
-    return {"message": "Try endpoints: /add?a=5&b=3, /subtract, /multiply, /divide"}
+    return {"message": "Calculator API is running!"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
