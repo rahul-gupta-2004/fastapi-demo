@@ -21,3 +21,4 @@ print("Divide:", response.json())
 # Root endpoint
 response = requests.get(BASE_URL)
 print("Root:", response.json())
+
